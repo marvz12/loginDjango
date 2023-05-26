@@ -1,0 +1,18 @@
+{% extends 'members/base.html' %}
+
+{% block content %}
+</br></br>
+<div style="margin-left: 400px; width: 600px; height: 50px; background-color: rgba(11, 79, 188, 0.5); display: flex; justify-content: center; align-items: center;">
+    <h2>Login</h2>
+</div>
+<div style="margin-left: 400px; width: 600px; height: 600px; background-color: rgba(5, 138, 199, 0.5); display: flex; justify-content: center; align-items: center;">
+    
+    <form method=POST>
+        {% csrf_token %}
+        {{ form.as_div }}
+        </br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    
+</div>
+{% endblock %}
